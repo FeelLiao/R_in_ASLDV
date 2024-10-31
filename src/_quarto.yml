@@ -1,0 +1,51 @@
+project:
+  type: book
+  output-dir: _book
+
+engine: knitr
+
+book:
+  title: "R语言统计学习和数据可视化学习笔记"
+  language: zh
+  reader-mode: true
+
+  page-footer:
+    center: |
+      <a href="https://blog.stariverfeel.eu.org/">Feel's Blog</a> | Written by <a href="https://github.com/FeelLiao/">FeelLiao</a> | Built with <a href="https://quarto.org/">Quarto</a>.
+  favicon: "📚"
+  site-url: https://bookr.stariverfeel.eu.org/
+  repo-url: https://github.com/FeelLiao/R_in_ASLDV
+  repo-branch: main
+  repo-actions: [edit, issue]
+  chapters:
+    - index.qmd
+    
+    - part: LinearMethods.qmd
+      chapters: 
+        - StatisticalLearning.qmd
+        - LinearRegression.qmd
+        - Classification.qmd
+        - ResamplingMethods.qmd
+        - LinearModelSelectionAndRegularization.qmd
+    
+    - part: NonLinearMethods.qmd
+      chapters: 
+        - MovingBeyondLinearity.qmd
+        - Tree-BasedMethods.qmd
+        - SupportVectorMachines.qmd
+        - UnsupervisedLearning.qmd
+    
+    - part: Advancedggplot2.qmd
+      chapters: 
+        - top50ggplot2_visualizations.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+    code-link: true
+
+    author-meta: "Feel Liao"
+    callout-appearance: simple
+
+editor: visual
